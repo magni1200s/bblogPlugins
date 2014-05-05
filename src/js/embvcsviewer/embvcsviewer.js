@@ -4,7 +4,7 @@ BBLog.handle("add.plugin", {
 	/** @type 	{String}		The extension's name.  		*/
 	name: 'Emblemers VC Server Viewer',
 	/** @type 	{String} 		The version string.		*/
-	version: '1.0.0.0',
+	version: '1.0.0.1',
 	/** @type 	{Object} 		BBL Translation stuff.		*/
 	translations: {},
 	/** @type 	{Object} 		Config flags from BBL.		*/
@@ -37,7 +37,6 @@ BBLog.handle("add.plugin", {
 			if (count2 == 0) {
 				var code = '<div id="main-loggedin-embvcsiewer" class="main-loggedin-embvcsiewer">'
 					code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=173.199.82.240:9308&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=0&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="348"></iframe>'
-					code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=216.246.125.210:64754&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=0&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="348"></iframe>'
 					code += '</div>'
 				$(".advirticement.battlelog-bf4-homepage").before(code)
 			}
