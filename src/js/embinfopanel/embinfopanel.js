@@ -64,7 +64,7 @@ BBLog.handle("add.plugin", {
 					var exitGsvViewer = $("html").find(".main-loggedin-embgamesvrviewer").length
 					if (exitGsvViewer == 0) {
 						code += '<div id="main-loggedin-embgamesvrviewer" class="main-loggedin-embgamesvrviewer">'
-						code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.224:25640&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="472"></iframe>'
+						code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.224:25640&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="412"></iframe>'
 						code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.195:25500&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="412"></iframe>'
 						code += '</div>'
 					}
