@@ -4,7 +4,7 @@ BBLog.handle("add.plugin", {
 	/** @type 	{String}		The extension's name.  		*/
 	name: 'Emblemers Platoon Information Panel',
 	/** @type 	{String} 		The version string.		*/
-	version: '1.0.1.0',
+	version: '1.0.1.1',
 	/** @type 	{Object} 		BBL Translation stuff.		*/
 	translations: {
 		"en": {
