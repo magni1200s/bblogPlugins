@@ -4,7 +4,7 @@ BBLog.handle("add.plugin", {
 	/** @type 	{String}		The extension's name.  		*/
 	name: 'Emblemers Platoon Information Panel',
 	/** @type 	{String} 		The version string.		*/
-	version: '1.0.1.4',
+	version: '1.0.1.5',
 	/** @type 	{Object} 		BBL Translation stuff.		*/
 	translations: {
 		"en": {
@@ -55,8 +55,12 @@ BBLog.handle("add.plugin", {
 					var exitGalViewer = $("html").find(".main-loggedin-embgalleryviewer").length
 					if (exitGalViewer == 0) {
 						code += '<div id="main-loggedin-embgalleryviewer" class="main-loggedin-embgalleryviewer">'
-//						code += '<iframe style="width: 320px; height: 370px;" allowTransparency="true" frameborder="0" scrolling="no" src="http://www.gmodules.com/gadgets/ifr?url=http%3a%2f%2fprac%2dgadget%2egooglecode%2ecom%2ffiles%2fpinterest%2dslideshow%2exml&up_USER=magni1200s&up_BOARD=bf4-emblems-by-the-emblemers&up_PWH=300&up_PHT=300&up_LNK=http%3a%2f%2fwww%2epinterest%2ecom%2fmagni1200s%2fbf4%2demblems%2dby%2dthe%2demblemers%2f&up_TIT=Emblemers%20Gallery&up_DTime=&up_TTime=&up_RND=&up_CLP=Yes&up_NAB=Yes&up_TCOL=%23ffffff&up_LCOL=%23ffffff&up_SCOL=%23444444&up_BCOL=%23444444&up_CCOL=%23444444"></iframe>'
-						code += '<iframe style="width: 320px; height: 370px;" allowTransparency="true" frameborder="0" scrolling="no" src="http://www.gmodules.com/gadgets/ifr?url=http%3a%2f%2framble%2esakura%2ene%2ejp%2femb%2fpinterest-slideshow%2exml&up_USER=magni1200s&up_BOARD=bf4-emblems-by-the-emblemers&up_PWH=300&up_PHT=300&up_LNK=http%3a%2f%2fwww%2epinterest%2ecom%2fmagni1200s%2fbf4%2demblems%2dby%2dthe%2demblemers%2f&up_TIT=Emblemers%20Gallery&up_DTime=&up_TTime=&up_RND=&up_CLP=Yes&up_NAB=Yes&up_TCOL=%23ffffff&up_LCOL=%23ffffff&up_SCOL=%23444444&up_BCOL=%23444444&up_CCOL=%23444444"></iframe>'
+						if (BBLog.cache('mode') === 'bf4') {
+//							code += '<iframe style="width: 320px; height: 370px;" allowTransparency="true" frameborder="0" scrolling="no" src="http://www.gmodules.com/gadgets/ifr?url=http%3a%2f%2fprac%2dgadget%2egooglecode%2ecom%2ffiles%2fpinterest%2dslideshow%2exml&up_USER=magni1200s&up_BOARD=bf4-emblems-by-the-emblemers&up_PWH=300&up_PHT=300&up_LNK=http%3a%2f%2fwww%2epinterest%2ecom%2fmagni1200s%2fbf4%2demblems%2dby%2dthe%2demblemers%2f&up_TIT=Emblemers%20Gallery&up_DTime=&up_TTime=&up_RND=&up_CLP=Yes&up_NAB=Yes&up_TCOL=%23ffffff&up_LCOL=%23ffffff&up_SCOL=%23444444&up_BCOL=%23444444&up_CCOL=%23444444"></iframe>'
+							code += '<iframe style="width: 320px; height: 370px;" allowTransparency="true" frameborder="0" scrolling="no" src="http://www.gmodules.com/gadgets/ifr?url=http%3a%2f%2framble%2esakura%2ene%2ejp%2femb%2fpinterest-slideshow%2exml&up_USER=magni1200s&up_BOARD=bf4-emblems-by-the-emblemers&up_PWH=300&up_PHT=300&up_LNK=http%3a%2f%2fwww%2epinterest%2ecom%2fmagni1200s%2fbf4%2demblems%2dby%2dthe%2demblemers%2f&up_TIT=Emblemers%20Gallery&up_DTime=&up_TTime=&up_RND=&up_CLP=Yes&up_NAB=Yes&up_TCOL=%23ffffff&up_LCOL=%23ffffff&up_SCOL=%23444444&up_BCOL=%23444444&up_CCOL=%23444444"></iframe>'
+						} else if (BBLog.cache('mode') === 'bfh') {
+							code += '<iframe style="width: 320px; height: 370px;" allowTransparency="true" frameborder="0" scrolling="no" src="http://www.gmodules.com/gadgets/ifr?url=http%3a%2f%2framble%2esakura%2ene%2ejp%2femb%2fpinterest-slideshow%2exml&up_USER=magni1200s&up_BOARD=bf4-emblems-by-the-emblemers&up_PWH=300&up_PHT=300&up_LNK=http%3a%2f%2fwww%2epinterest%2ecom%2fmagni1200s%2fbf4%2demblems%2dby%2dthe%2demblemers%2f&up_TIT=Emblemers%20Gallery&up_DTime=&up_TTime=&up_RND=&up_CLP=Yes&up_NAB=Yes&up_TCOL=%23000000&up_LCOL=%23000000&up_SCOL=%23ffffff&up_BCOL=%23ffffff&up_CCOL=%23ffffff"></iframe>'
+						}
 						code += '</div>'
 					}
 				}
@@ -65,7 +69,11 @@ BBLog.handle("add.plugin", {
 					var exitGsvViewer = $("html").find(".main-loggedin-embgamesvrviewer").length
 					if (exitGsvViewer == 0) {
 						code += '<div id="main-loggedin-embgamesvrviewer" class="main-loggedin-embgamesvrviewer">'
-//						code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.195:25500&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="412"></iframe>'
+//						if (BBLog.cache('mode') === 'bf4') {
+//							code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.195:25500&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="412"></iframe>'
+//						} else if (BBLog.cache('mode') === 'bfh') {
+//							code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=109.200.221.195:25500&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=1&currentPlayersHeight=100&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="412"></iframe>'
+//						}
 						code += '</div>'
 					}
 				}
@@ -74,7 +82,11 @@ BBLog.handle("add.plugin", {
 					var exitVcsViewer = $("html").find(".main-loggedin-embvcsiewer").length
 					if (exitVcsViewer == 0) {
 						code += '<div id="main-loggedin-embvcsiewer" class="main-loggedin-embvcsiewer">'
-						code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=173.199.82.240:9308&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=0&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="348"></iframe>'
+						if (BBLog.cache('mode') === 'bf4') {
+							code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=173.199.82.240:9308&bgColor=333333&fontColor=CCCCCC&titleBgColor=222222&titleColor=FF9900&borderColor=555555&linkColor=FFCC00&borderLinkColor=222222&showMap=0&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="348"></iframe>'
+						} else if (BBLog.cache('mode') === 'bfh') {
+							code += '<iframe src="http://cache.www.gametracker.com/components/html0/?host=173.199.82.240:9308&bgColor=FFFFFF&fontColor=333333&titleBgColor=FFFFFF&titleColor=000000&borderColor=BBBBBB&linkColor=091858&borderLinkColor=5C5C5C&showMap=0&currentPlayersHeight=160&showCurrPlayers=1&showTopPlayers=0&showBlogs=0&width=320" frameborder="0" scrolling="no" width="320" height="348"></iframe>'
+						}
 						code += '</div>'
 					}
 				}
