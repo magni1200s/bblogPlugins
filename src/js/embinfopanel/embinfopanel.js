@@ -4,13 +4,14 @@ BBLog.handle("add.plugin", {
 	/** @type 	{String}		The extension's name.  		*/
 	name: 'Emblemers Platoon Information Panel',
 	/** @type 	{String} 		The version string.		*/
-	version: '1.0.1.5',
+	version: '1.0.2.0',
 	/** @type 	{Object} 		BBL Translation stuff.		*/
 	translations: {
 		"en": {
 			"show.galleries": 'Show EMB Platoon Gallery',
 			"show.gameservers": 'Show EMB Game Server Banner(s)',
-			"show.voiceservers": 'Show EMB Voice Server Banner(s)'
+			"show.voiceservers": 'Show EMB Voice Server Banner(s)',
+			"hide.bfhadtile": 'Hide BFH advertise tile'
 /*		},
 		"jp": {
 			"show.galleries": 'EMB小隊ギャラリーを表示する',
@@ -21,8 +22,9 @@ BBLog.handle("add.plugin", {
 	/** @type 	{Object} 		Config flags from BBL.		*/
 	configFlags: [
 		["show.galleries", 1],
-		["show.gameservers", 0],
-		["show.voiceservers", 1]
+		["show.gameservers", 1],
+		["show.voiceservers", 1],
+		["hide.bfhadtile", 0]
 	],
 	/** @type 	{Object} 		BBLogs main instance. 		*/
 	instance: {},
@@ -46,6 +48,13 @@ BBLog.handle("add.plugin", {
 	},
 	
 	setContainer: function() {
+		if (this.instance.storage('hide.bfhadtile')) {
+			var isGetbfhtile = $("html").find(".get-bfh-tile").length
+			if (isGetbfhtile == 1) {
+				$(".get-bfh-tile").remove()
+			}
+		}
+
 		if (this.instance.storage('show.galleries') || this.instance.storage('show.gameservers') || this.instance.storage('show.voiceservers')) {
 			var drawablePanels = $("html").find(".main-loggedin-middle").length
 			if (drawablePanels == 1) {
