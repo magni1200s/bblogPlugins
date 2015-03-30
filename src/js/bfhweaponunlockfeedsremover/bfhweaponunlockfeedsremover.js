@@ -34,7 +34,7 @@ BBLog.handle("add.plugin", {
 	setContainer: function() {
 		var isFeedList = $("html").find(".list.feed-events.base-menu").length
 		if (isFeedList == 1) {
-			$(".list.feed-events.base-menu li:has('div div div div'):has('.bfh-weapon_unlock')").remove()
+			$(".list.feed-events.base-menu li:has('div div div div'):has('.weapon_unlock.medium.*.bfh-weapon_unlock')").remove()
 		}
 	}
 });
