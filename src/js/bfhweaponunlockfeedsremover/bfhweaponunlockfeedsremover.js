@@ -4,7 +4,7 @@ BBLog.handle("add.plugin", {
 	/** @type 	{String}		The extension's name.  		*/
 	name: 'BFH weapon unlock feeds remover',
 	/** @type 	{String} 		The version string.		*/
-	version: '1.0.0.0',
+	version: '1.0.0.1',
 	/** @type 	{Object} 		BBL Translation stuff.		*/
 	translations: {},
 	/** @type 	{Object} 		Config flags from BBL.		*/
